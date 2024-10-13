@@ -10,6 +10,13 @@ import orderRouter from "./routes/orderRoute.js"
 // app config
 const app = express()
 const port = process.env.PORT || 4000;
+app.use(cors(
+    {
+        origin:["https://deploy-mern-lwhq.vercela.app"],
+        methods:["POST", "GET"],
+        credentials: true
+    }
+    ));
 
 
 // middlewares
